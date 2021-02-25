@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  web:
+    image: camptocamp/mapcache:latest
+    volumes:
+      - ./tiles:/var/sig/tiles
+      - ./config.xml:/mapcache/config.xml
+    ports:
+      - "8281:80"
